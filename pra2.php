@@ -1,6 +1,6 @@
 <?php
 
-function arrayUnique(array $arr): string
+function arrayUnique(array $arr): array
 {
     for ($i = 0; $i < count($arr); $i++) {
         for ($j = $i + 1; $j < count($arr); $j++) {
@@ -10,15 +10,7 @@ function arrayUnique(array $arr): string
         }
     }
   
-    $result = "";
-    for ($i = 0; $i < count($arr); $i++) {
-        $result .= $arr[$i];
-        if ($i < count($arr) - 1) {
-            $result .= " ";
-        }
-    }
-  
-    return $result;
+    return array_values($arr);
 }
 
 $inputArray = [56, 56, 56, 56, 67, 89, 67, 345, 345, 67, 34];
@@ -28,6 +20,6 @@ echo "Массив в коде:\n";
 print_r($inputArray);
 
 echo "\nМассив без дубликатов:\n";
-echo $uniqueArray;
+print_r($uniqueArray);
 
 ?>
