@@ -1,6 +1,6 @@
 <?php
 
-function arrayUnique(array $arr): string
+function arrayUnique(array $arr): array
 {
     for ($i = 0; $i < count($arr); $i++) {
         for ($j = $i + 1; $j < count($arr); $j++) {
